@@ -1,0 +1,94 @@
+/* 전체 페이지 */
+.write-page {
+  background-color: #121212;
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* 중앙 컨테이너 */
+.write-container {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 90px 20px 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 뒤로가기 버튼 */
+.back-btn {
+  position: absolute;
+  top: 90px;
+  left: 20px;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* 타이틀 */
+.write-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* 각 입력 요소를 감싸는 공통 래퍼 */
+.write-field {
+  width: 100%;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* 라벨 */
+.label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* 인풋/텍스트 영역 공통 스타일 */
+.write-input,
+.write-textarea,
+.write-file,
+.write-token {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #3c3c3c;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.write-textarea {
+  min-height: 180px;
+  resize: none;
+}
+
+/* 등록 버튼 래퍼 (위 박스와 동일한 폭) */
+.submit-field {
+  margin-top: 10px;
+}
+
+/* 등록 버튼 */
+.write-container .submit-btn {
+  width: 100% !important;      /* 위 입력 박스와 무조건 같은 폭 */
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #4e8cff;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: 0.2s;
+  margin: 0 !important;        /* 혹시 전역 button margin 있어도 강제 제거 */
+}
+
+.write-container .submit-btn:hover {
+  background-color: #6fa2ff;
+}

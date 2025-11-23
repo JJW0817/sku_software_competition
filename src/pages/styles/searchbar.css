@@ -1,0 +1,46 @@
+.searchbar-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+  
+    border: 1px solid #3c3c3c;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+  
+    width: 120px;
+    height: 36px;
+  
+    transition: 
+      border-color 0.2s ease,
+      background-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.18s ease;   /* ✔ 확대 효과 부드럽게 */
+  }
+  
+  /* ✔ Hover 시 약간 커짐 (버튼 느낌) */
+  .searchbar-wrapper:hover {
+    transform: scale(1.08);
+  }
+  
+  /* ✔ 포커스 시 강조 */
+  .searchbar-wrapper:focus-within {
+    border-color: #4a90e2;
+    background-color: #252525;
+    box-shadow: 0 0 6px rgba(74, 144, 226, 0.4);
+  }
+  
+  .searchbar-icon {
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .searchbar-input {
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 13px;
+  }
+  

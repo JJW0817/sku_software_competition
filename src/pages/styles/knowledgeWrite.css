@@ -1,0 +1,55 @@
+.knowledge-write-page {
+    background-color: #1a1a1a;
+    min-height: 100vh;
+    padding-top: 80px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  
+  .knowledge-write-container {
+    width: 96%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding-top: 16px;
+  }
+  
+  .input-group {
+    margin-bottom: 26px;
+  }
+  
+  .input-label {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .input-box,
+  .textarea-box {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #3c3c3c;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 17px;
+  }
+  
+  .textarea-box {
+    height: 240px;
+    resize: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 12px;
+    border: none;
+    background-color: #007aff;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 18px;
+  }
+  

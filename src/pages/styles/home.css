@@ -1,0 +1,372 @@
+/* 전체 페이지 */
+.home-page {
+  background: linear-gradient(180deg, #050505 0%, #0f0f0f 35%, #181818 100%);
+  min-height: 100vh;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  color: white;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+/* ---------- 상단 헤더 ---------- */
+.home-header {
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(180deg, #141414, #0e0e0e);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+  border-bottom: 1px solid rgba(77, 163, 255, 0.45);
+}
+
+/* 로그인, 회원가입 */
+.header-auth-btn {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+
+  transition: 
+    color 0.2s ease,
+    transform 0.2s ease,
+    text-shadow 0.25s ease;
+}
+
+/* hover 시 파란색 + 크게 확대 */
+.header-auth-btn:hover {
+  color: #4da3ff; /* 파란색 */
+  transform: scale(1.12); 
+  text-shadow: 0 0 8px rgba(77, 163, 255, 0.6); /* 은은한 블루 글로우 */
+}
+
+/* 클릭 시 눌리는 애니메이션 */
+.header-auth-btn:active {
+  transform: scale(0.96);
+}
+
+/* 🔔 아이콘 감싸는 래퍼 */
+.bell-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+/* 🔔 아이콘 크기 증가 */
+.home-bell-icon {
+  font-size: 23px;
+  opacity: 0.85;
+  transition: 0.25s ease;
+}
+
+.bell-wrapper:hover .home-bell-icon {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* 알림 흔들림 */
+@keyframes bell-shake {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(6deg) scale(1.1); }
+  50% { transform: rotate(-6deg) scale(1.1); }
+  75% { transform: rotate(4deg) scale(1.1); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+/* Hover 효과 (파란색 + Glow) */
+.bell-wrapper:hover .home-bell-icon {
+  animation: bell-shake 0.35s ease-in-out;
+  transform-origin: top center;
+
+  color: #4da3ff;
+  filter: drop-shadow(0 0 8px rgba(77, 163, 255, 0.65));
+  transform: scale(1.18);
+
+  transition: color 0.25s ease, transform 0.25s ease, filter 0.25s ease;
+}
+
+/* 알림 개수 배지 */
+.alarm-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+
+  background: #ff3b30;
+  color: white;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  padding: 2px 5px;
+  min-width: 16px;
+  height: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.4);
+
+  pointer-events: none;
+}
+
+.home-title {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.home-header-icons {
+  display: flex;
+  gap: 16px;
+}
+
+.home-icon {
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: 0.25s ease;
+}
+
+.home-icon:hover {
+  opacity: 1;
+}
+
+/* ---------- Quick Links ---------- */
+.quick-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px;
+  margin-top: 10px;
+}
+
+.quick-card {
+  width: 32%;
+  padding: 14px;
+  border-radius: 12px;
+
+  background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 50%, #1e1e1e 100%);
+
+  border: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  cursor: pointer;
+
+  box-shadow:
+    0 3px 8px rgba(0,0,0,0.35),
+    inset 1px 1px 3px rgba(255,255,255,0.05);
+
+  transition: 0.25s ease;
+}
+
+.quick-card:hover {
+  background: linear-gradient(180deg, #4a4a4a 0%, #333333 50%, #232323 100%);
+  transform: translateY(-3px);
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.5),
+    inset 1px 1px 4px rgba(255,255,255,0.07);
+}
+
+.quick-title {
+  font-size: 15px;
+  opacity: 0.95;
+  font-weight: 600;
+}
+
+
+
+/* ---------- 메인 기능 ---------- */
+.main-vertical-list {
+  width: 88%;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-vertical-card {
+  background-color: #1b1b1b;
+  border-radius: 16px;
+  padding: 24px 18px;
+  height: 130px;
+
+  border: 1px solid #292929;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 14px;
+  cursor: pointer;
+
+  transition: all 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.main-vertical-card:hover {
+  background-color: #242424;
+  transform: scale(1.06);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* 아이콘 */
+.main-vertical-icon {
+  font-size: 36px;
+  opacity: 0.9;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.25s ease;   
+  color: white;
+}
+
+.main-vertical-card:hover .main-vertical-icon {
+  transform: translateY(-4px);
+  color: #4da3ff !important;
+  text-shadow: 0 0 10px rgba(77,163,255,0.45);
+}
+
+/* 제목 + Hover 멘트 */
+.title-tooltip-wrapper {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-vertical-title {
+  font-size: 18px;
+  font-weight: 600;
+  opacity: 1;
+  transition: opacity 0.2s ease, visibility 0.2s ease, height 0.2s ease;
+}
+
+.main-vertical-card:hover .main-vertical-title {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+}
+
+.hover-ment {
+  position: absolute;
+  font-size: 17px;
+  font-weight: 600;
+  opacity: 0;
+
+  color: #4da3ff;
+  text-shadow: 0 0 8px rgba(77, 163, 255, 0.55);
+
+  white-space: nowrap;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(4px);
+}
+
+.main-vertical-card:hover .hover-ment {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 파란 Glow 테두리 */
+.main-vertical-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+
+  border: 2px solid rgba(77, 163, 255, 0.75);
+
+  box-shadow: 
+    0 0 16px rgba(77, 163, 255, 0.55),
+    0 0 28px rgba(77, 163, 255, 0.25) inset;
+
+  pointer-events: none;
+  transition: 0.32s ease;
+}
+
+.main-vertical-card:hover::before {
+  border-color: rgba(77, 163, 255, 1);
+  box-shadow: 
+    0 0 22px rgba(77, 163, 255, 0.85),
+    0 0 35px rgba(77, 163, 255, 0.55) inset;
+}
+
+/* ---------- 하단 탭 ---------- */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+
+  background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
+  border-top: 1px solid rgba(255,255,255,0.08);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  backdrop-filter: blur(6px);
+}
+
+/* 각 버튼을 구분 */
+.bottom-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 13px;
+  opacity: 0.75;
+  cursor: pointer;
+
+  padding-top: 6px;
+  padding-bottom: 4px;
+
+  position: relative;
+  transition: 0.25s ease;
+}
+
+
+.bottom-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 12px;
+  height: 40%;
+  width: 1px;
+  background: rgba(255,255,255,0.06);
+}
+
+/* hover 시 더 확실한 강조 */
+.bottom-item:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+/* 아이콘 디자인 */
+.bottom-icon {
+  font-size: 21px;
+  margin-bottom: 3px;
+  transition: 0.25s ease;
+}
+
+/* hover 시 파란 포커스 + 글로우 */
+.bottom-item:hover .bottom-icon {
+  color: #4da3ff;
+  text-shadow: 0 0 10px rgba(77,163,255,0.5);
+  transform: translateY(-1px);
+}
+
+/* hover 시 텍스트도 파란색 */
+.bottom-item:hover span {
+  color: #4da3ff;
+  text-shadow: 0 0 10px rgba(77,163,255,0.4);
+}

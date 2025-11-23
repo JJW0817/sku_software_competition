@@ -1,0 +1,142 @@
+.profile-page {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  padding-top: 80px; /* 헤더 공간 */
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.profile-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* --- 상단 프로필 카드 --- */
+.profile-card {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.profile-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #3b3b3b;
+  margin: 0 auto;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.profile-trust {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.trust-count {
+  margin-right: 6px;
+}
+
+/* --- 정보 카드 --- */
+.info-card {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid #3b3b3b;
+  margin-bottom: 26px;
+}
+
+/* 🔥 info-card 최상단 버튼 */
+.info-card-top {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.info-top-btn {
+  background-color: #4a8cff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.info-title {
+  font-size: 11px;
+  padding: 4px 8px;
+  background-color: #333;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.info-value {
+  font-size: 15px;
+  margin-top: 6px;
+  padding-left: 4px;
+}
+
+/* 입력창 */
+.info-input {
+  width: 100%;
+  background-color: #1b1b1b;
+  border: 1px solid #444;
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+/* 저장/취소 버튼 */
+.edit-button-wrapper {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.save-btn {
+  flex: 1;
+  padding: 12px 0;
+  background-color: #00b894;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  flex: 1;
+  padding: 12px 0;
+  background-color: #555;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* --- 계정 관리 --- */
+.account-card {
+  background-color: #222;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #3b3b3b;
+  margin-bottom: 40px;
+}
+
+.account-link {
+  font-size: 15px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.account-link.danger {
+  color: #ff6161;
+}

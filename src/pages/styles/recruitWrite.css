@@ -1,0 +1,71 @@
+
+.recruit-write-wrapper {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+/* 페이지 전체 */
+.write-page {
+  background-color: #1a1a1a;
+  min-height: 100vh;
+  padding-top: 80px;
+  color: #fff;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+
+.write-container {
+  width: 96%;
+  max-width: 900px;   
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+/* 라벨 */
+.input-label {
+  display: block;
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0 auto 8px;
+  opacity: 0.9;
+}
+
+/* 입력 그룹 간격 */
+.input-group {
+  margin-bottom: 26px;
+}
+
+/* input + textarea 스타일 */
+.input-box,
+.textarea-box {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #3c3c3c;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 17px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* textarea 크기 */
+.textarea-box {
+  height: 240px;
+  resize: none;
+}
+
+/* 등록 버튼 */
+.submit-btn {
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 12px;
+  border: none;
+  background-color: #007aff;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 18px;
+}
